@@ -9,11 +9,28 @@ import Foundation
 
 class OpenAIService: ObservableObject{
     
-    let api_key = "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"
+    var apiKey: String {
+        guard let path = Bundle.main.path(forResource: "keys", ofType: "plist")
+        else {
+            return "unknown"
+        }
+        
+        guard let keys = NSDictionary(contentsOfFile: path)
+        else {
+            return "unknown"
+        }
+        
+        guard let apiKey = keys["openai_secret_key"] as? String
+        else {
+            return "unknown"
+        }
+        
+        return apiKey
+    }
     
     func generateImage(from prompt: String, total n: Int) async throws -> (photos: [Photo], errorCode: String?, errorMessage: String?) {
         var request = URLRequest(url: OpenAIEndpoint.generations.url)
-        request.setValue("Bearer \(api_key)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         
