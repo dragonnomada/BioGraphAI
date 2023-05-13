@@ -7,12 +7,50 @@
 
 import SwiftUI
 
+struct DetailView: View {
+    var body: some View {
+        Text("Hello")
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("BioGraphAI 👾")
+        NavigationStack {
+            VStack {
+                NavigationLink("Details") {
+                    DetailView()
+                        .navigationTitle("Details")
+                }
+            }
+            .navigationTitle("BioGraphAI 👾")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarRole(.editor)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button() {
+                        
+                    } label: {
+                        Image(systemName: "person.circle")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button() {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+                ToolbarItemGroup(placement: .secondaryAction) {
+                    Button("Settings") {
+                    }
+                    
+                    Button("About") {
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

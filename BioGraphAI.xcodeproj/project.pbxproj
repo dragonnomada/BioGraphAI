@@ -14,6 +14,12 @@
 		EBEA72EE2A10147B009037F7 /* BioGraphAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA72ED2A10147B009037F7 /* BioGraphAITests.swift */; };
 		EBEA72F82A10147B009037F7 /* BioGraphAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA72F72A10147B009037F7 /* BioGraphAIUITests.swift */; };
 		EBEA72FA2A10147B009037F7 /* BioGraphAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA72F92A10147B009037F7 /* BioGraphAIUITestsLaunchTests.swift */; };
+		EBEA73082A102585009037F7 /* OpenAIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73072A102585009037F7 /* OpenAIEndpoint.swift */; };
+		EBEA730A2A102735009037F7 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73092A102735009037F7 /* OpenAIService.swift */; };
+		EBEA730C2A102756009037F7 /* DALLEResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730B2A102756009037F7 /* DALLEResponse.swift */; };
+		EBEA730E2A102762009037F7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730D2A102762009037F7 /* Photo.swift */; };
+		EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730F2A1027CB009037F7 /* DALLEView.swift */; };
+		EBEA73132A102EB0009037F7 /* DALLEResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		EBEA72F32A10147B009037F7 /* BioGraphAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioGraphAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEA72F72A10147B009037F7 /* BioGraphAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioGraphAIUITests.swift; sourceTree = "<group>"; };
 		EBEA72F92A10147B009037F7 /* BioGraphAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioGraphAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EBEA73072A102585009037F7 /* OpenAIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIEndpoint.swift; sourceTree = "<group>"; };
+		EBEA73092A102735009037F7 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		EBEA730B2A102756009037F7 /* DALLEResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEResponse.swift; sourceTree = "<group>"; };
+		EBEA730D2A102762009037F7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		EBEA730F2A1027CB009037F7 /* DALLEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEView.swift; sourceTree = "<group>"; };
+		EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEResponseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,8 @@
 		EBEA72DB2A10147A009037F7 /* BioGraphAI */ = {
 			isa = PBXGroup;
 			children = (
+				EBEA73112A1027D3009037F7 /* Views */,
+				EBEA73062A102566009037F7 /* Model */,
 				EBEA72DC2A10147A009037F7 /* BioGraphAIApp.swift */,
 				EBEA72DE2A10147A009037F7 /* ContentView.swift */,
 				EBEA72E02A10147B009037F7 /* Assets.xcassets */,
@@ -125,6 +139,26 @@
 				EBEA72F92A10147B009037F7 /* BioGraphAIUITestsLaunchTests.swift */,
 			);
 			path = BioGraphAIUITests;
+			sourceTree = "<group>";
+		};
+		EBEA73062A102566009037F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBEA73072A102585009037F7 /* OpenAIEndpoint.swift */,
+				EBEA73092A102735009037F7 /* OpenAIService.swift */,
+				EBEA730B2A102756009037F7 /* DALLEResponse.swift */,
+				EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */,
+				EBEA730D2A102762009037F7 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBEA73112A1027D3009037F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBEA730F2A1027CB009037F7 /* DALLEView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEA730E2A102762009037F7 /* Photo.swift in Sources */,
+				EBEA73082A102585009037F7 /* OpenAIEndpoint.swift in Sources */,
 				EBEA72DF2A10147A009037F7 /* ContentView.swift in Sources */,
 				EBEA72DD2A10147A009037F7 /* BioGraphAIApp.swift in Sources */,
+				EBEA730A2A102735009037F7 /* OpenAIService.swift in Sources */,
+				EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */,
+				EBEA73132A102EB0009037F7 /* DALLEResponseError.swift in Sources */,
+				EBEA730C2A102756009037F7 /* DALLEResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
