@@ -20,6 +20,7 @@
 		EBEA730E2A102762009037F7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730D2A102762009037F7 /* Photo.swift */; };
 		EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730F2A1027CB009037F7 /* DALLEView.swift */; };
 		EBEA73132A102EB0009037F7 /* DALLEResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */; };
+		EBEA73162A1033E9009037F7 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBEA73152A1033E9009037F7 /* keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EBEA730D2A102762009037F7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		EBEA730F2A1027CB009037F7 /* DALLEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEView.swift; sourceTree = "<group>"; };
 		EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEResponseError.swift; sourceTree = "<group>"; };
+		EBEA73152A1033E9009037F7 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				EBEA72DE2A10147A009037F7 /* ContentView.swift */,
 				EBEA72E02A10147B009037F7 /* Assets.xcassets */,
 				EBEA72E22A10147B009037F7 /* Preview Content */,
+				EBEA73152A1033E9009037F7 /* keys.plist */,
 			);
 			path = BioGraphAI;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				EBEA72E42A10147B009037F7 /* Preview Assets.xcassets in Resources */,
 				EBEA72E12A10147B009037F7 /* Assets.xcassets in Resources */,
+				EBEA73162A1033E9009037F7 /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
