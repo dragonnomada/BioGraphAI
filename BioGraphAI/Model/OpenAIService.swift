@@ -28,6 +28,49 @@ class OpenAIService: ObservableObject{
         return apiKey
     }
     
+    func generateChat(from prompt: String) async throws -> (chat: String, errorCode: String?, errorMessage: String?) {
+        var request = URLRequest(url: OpenAIEndpoint.completions.url)
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        
+        let parameters: [String: Any] = [
+            "model": "gpt-3.5-turbo",
+            "messages": [
+                [
+                    "role": "user",
+                    "content": prompt
+                ]
+            ]
+        ]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+        
+        if let jsonData = jsonData {
+            if let text = String(data: jsonData, encoding: .utf8) {
+                print(text)
+            }
+        }
+        
+        request.httpBody = jsonData
+
+        let (data, _) = try await URLSession.shared.data(for: request)
+        
+        if let text = String(data: data, encoding: .utf8) {
+            print(text)
+        }
+        
+        if let chatResponse = try? JSONDecoder().decode(ChatResponse.self, from: data) {
+            return (chatResponse.choices.first!.message.content, nil, nil)
+        }
+        
+        if let chatResponseError = try? JSONDecoder().decode(ChatResponseError.self, from: data) {
+            return ("", chatResponseError.error.code, chatResponseError.error.message)
+        }
+        
+        return ("", "unknown", "Unhandled error (OpenAIService.generateChat)")
+    }
+    
     func generateImage(from prompt: String, total n: Int) async throws -> (photos: [Photo], errorCode: String?, errorMessage: String?) {
         var request = URLRequest(url: OpenAIEndpoint.generations.url)
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
@@ -42,6 +85,12 @@ class OpenAIService: ObservableObject{
         
         let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
         
+        if let jsonData = jsonData {
+            if let text = String(data: jsonData, encoding: .utf8) {
+                print(text)
+            }
+        }
+        
         request.httpBody = jsonData
 
         let (data, _) = try await URLSession.shared.data(for: request)
@@ -55,7 +104,6 @@ class OpenAIService: ObservableObject{
         }
         
         if let dalleResponseError = try? JSONDecoder().decode(DALLEResponseError.self, from: data) {
-            print("Error: \(dalleResponseError.error.message)")
             return ([], dalleResponseError.error.code, dalleResponseError.error.message)
         }
         

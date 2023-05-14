@@ -21,7 +21,7 @@ struct DALLEView: View {
                     ProgressView()
                 }
                 
-                if photos.count == 0 {
+                if !loading && photos.count == 0 {
                     Text("Empty photos")
                         .font(.title)
                 }
