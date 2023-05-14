@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BiographyAdd: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var store: Store
+    
     @ObservedObject var openAI = OpenAIService()
     
     @State var name: String = "Albert Einstein"
@@ -23,6 +26,8 @@ struct BiographyAdd: View {
     @State var loadingChat = false
     @State var errorPhotos: String? = nil
     @State var errorChat: String? = nil
+    @State var errorGeneral: String? = nil
+    @State var showErrorGeneral: Bool = false
     
     @State var biography: String? = nil
     
@@ -164,7 +169,27 @@ struct BiographyAdd: View {
                     HStack {
                         Spacer()
                         Button("Add") {
+                            guard let selectedPhoto = selectedPhoto
+                            else { return }
                             
+                            guard let url = URL(string: selectedPhoto.url)
+                            else { return }
+                            
+                            guard let biography = biography
+                            else { return }
+                            
+                            Task {
+                                do {
+                                    let data = try Data(contentsOf: url)
+                                    
+                                    store.biographies.append(Biography(name: name, picture: data, content: biography))
+                                } catch(let error) {
+                                    errorGeneral = "\(error)"
+                                    showErrorGeneral = true
+                                }
+                                
+                                presentationMode.wrappedValue.dismiss()
+                            }
                         }
                         .disabled(errorPhotos != nil || errorChat != nil || selectedPhoto == nil || biography == nil || loadingPhothos || loadingChat)
                         Spacer()
@@ -176,6 +201,9 @@ struct BiographyAdd: View {
             .padding()
         }
         .padding()
+        .alert(isPresented: $showErrorGeneral) {
+            Alert(title: Text("Error: \(errorGeneral ?? "unknown")"))
+        }
     }
     
     func loadPhotosAndChat() {
@@ -187,7 +215,8 @@ struct BiographyAdd: View {
                 self.errorPhotos = "\(error)"
                 loadingPhothos = false
             }
-            
+        }
+        Task {
             do {
                 try await loadChat()
             } catch(let error){
@@ -199,6 +228,7 @@ struct BiographyAdd: View {
     }
     
     func loadPhotos() async throws {
+        errorPhotos = nil
         loadingPhothos = true
         photos = []
         
@@ -218,6 +248,7 @@ struct BiographyAdd: View {
     }
     
     func loadChat() async throws {
+        errorChat = nil
         loadingChat = true
         biography = nil
         
@@ -239,5 +270,6 @@ struct BiographyAdd: View {
 struct BiographyAdd_Previews: PreviewProvider {
     static var previews: some View {
         BiographyAdd()
+            .environmentObject(Store())
     }
 }

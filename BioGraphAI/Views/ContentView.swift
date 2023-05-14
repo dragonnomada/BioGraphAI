@@ -14,14 +14,45 @@ struct DetailView: View {
 }
 
 struct ContentView: View {
+    @EnvironmentObject var store: Store
+    
     @State var showingAddBiography = false
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Biographies here")
                 
-                Spacer()
+                if store.biographies.count == 0 {
+                    Spacer()
+                    Text("There are not biographies")
+                        .font(.callout)
+                        .italic()
+                        .foregroundColor(.secondary)
+                    Spacer()
+                } else {
+                    List(store.biographies, id: \.name) { biography in
+                        NavigationLink {
+                            BiographyDetails(biography: biography)
+                        } label: {
+                            VStack {
+                                HStack {
+                                    Image(data: biography.picture)!
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 50, height: 50)
+                                        .clipped()
+                                        .clipShape(Circle())
+                                    
+                                    Text(biography.name)
+                                        .bold()
+                                }
+                                Text(biography.summary)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
                 
                 HStack() {
                     Spacer()
@@ -80,5 +111,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Store())
     }
 }

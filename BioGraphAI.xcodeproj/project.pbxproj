@@ -24,6 +24,10 @@
 		EBEA73182A104836009037F7 /* BiographyAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73172A104836009037F7 /* BiographyAdd.swift */; };
 		EBEA731A2A105351009037F7 /* ChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73192A105351009037F7 /* ChatResponse.swift */; };
 		EBEA731E2A1055A9009037F7 /* ChatResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA731D2A1055A9009037F7 /* ChatResponseError.swift */; };
+		EBEA73202A1073FB009037F7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA731F2A1073FB009037F7 /* Store.swift */; };
+		EBEA73222A10749B009037F7 /* Biography.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73212A10749B009037F7 /* Biography.swift */; };
+		EBEA73252A107D30009037F7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73242A107D30009037F7 /* Image.swift */; };
+		EBEA73272A10807D009037F7 /* BiographyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73262A10807D009037F7 /* BiographyDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		EBEA73172A104836009037F7 /* BiographyAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyAdd.swift; sourceTree = "<group>"; };
 		EBEA73192A105351009037F7 /* ChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponse.swift; sourceTree = "<group>"; };
 		EBEA731D2A1055A9009037F7 /* ChatResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponseError.swift; sourceTree = "<group>"; };
+		EBEA731F2A1073FB009037F7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EBEA73212A10749B009037F7 /* Biography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biography.swift; sourceTree = "<group>"; };
+		EBEA73242A107D30009037F7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		EBEA73262A10807D009037F7 /* BiographyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 		EBEA72DB2A10147A009037F7 /* BioGraphAI */ = {
 			isa = PBXGroup;
 			children = (
+				EBEA73232A107D1E009037F7 /* Extensions */,
 				EBEA73112A1027D3009037F7 /* Views */,
 				EBEA73062A102566009037F7 /* Model */,
 				EBEA72DC2A10147A009037F7 /* BioGraphAIApp.swift */,
@@ -159,6 +168,8 @@
 				EBEA730B2A102756009037F7 /* DALLEResponse.swift */,
 				EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */,
 				EBEA730D2A102762009037F7 /* Photo.swift */,
+				EBEA731F2A1073FB009037F7 /* Store.swift */,
+				EBEA73212A10749B009037F7 /* Biography.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +180,17 @@
 				EBEA72DE2A10147A009037F7 /* ContentView.swift */,
 				EBEA73172A104836009037F7 /* BiographyAdd.swift */,
 				EBEA730F2A1027CB009037F7 /* DALLEView.swift */,
+				EBEA73262A10807D009037F7 /* BiographyDetails.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EBEA73232A107D1E009037F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBEA73242A107D30009037F7 /* Image.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +327,14 @@
 				EBEA731A2A105351009037F7 /* ChatResponse.swift in Sources */,
 				EBEA730E2A102762009037F7 /* Photo.swift in Sources */,
 				EBEA73082A102585009037F7 /* OpenAIEndpoint.swift in Sources */,
+				EBEA73202A1073FB009037F7 /* Store.swift in Sources */,
 				EBEA72DF2A10147A009037F7 /* ContentView.swift in Sources */,
 				EBEA73182A104836009037F7 /* BiographyAdd.swift in Sources */,
 				EBEA72DD2A10147A009037F7 /* BioGraphAIApp.swift in Sources */,
+				EBEA73252A107D30009037F7 /* Image.swift in Sources */,
 				EBEA730A2A102735009037F7 /* OpenAIService.swift in Sources */,
+				EBEA73222A10749B009037F7 /* Biography.swift in Sources */,
+				EBEA73272A10807D009037F7 /* BiographyDetails.swift in Sources */,
 				EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */,
 				EBEA731E2A1055A9009037F7 /* ChatResponseError.swift in Sources */,
 				EBEA73132A102EB0009037F7 /* DALLEResponseError.swift in Sources */,
