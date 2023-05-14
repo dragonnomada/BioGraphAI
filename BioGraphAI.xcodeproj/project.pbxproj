@@ -74,6 +74,7 @@
 		EBEA73242A107D30009037F7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		EBEA73262A10807D009037F7 /* BiographyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyDetails.swift; sourceTree = "<group>"; };
 		EBEA73292A108665009037F7 /* BiographyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BiographyModel.xcdatamodel; sourceTree = "<group>"; };
+		EBEA732B2A1093D6009037F7 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 				EBEA72E02A10147B009037F7 /* Assets.xcassets */,
 				EBEA72E22A10147B009037F7 /* Preview Content */,
 				EBEA73152A1033E9009037F7 /* keys.plist */,
+				EBEA732B2A1093D6009037F7 /* .gitignore.md */,
 			);
 			path = BioGraphAI;
 			sourceTree = "<group>";
