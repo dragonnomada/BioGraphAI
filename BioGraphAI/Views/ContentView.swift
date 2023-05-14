@@ -30,23 +30,23 @@ struct ContentView: View {
                         .foregroundColor(.secondary)
                     Spacer()
                 } else {
-                    List(store.biographies, id: \.name) { biography in
+                    List(store.biographies, id: \.id) { (biography: BiographyModel) in
                         NavigationLink {
                             BiographyDetails(biography: biography)
                         } label: {
                             VStack {
                                 HStack {
-                                    Image(data: biography.picture)!
+                                    Image(data: biography.picture)
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 50, height: 50)
                                         .clipped()
                                         .clipShape(Circle())
                                     
-                                    Text(biography.name)
+                                    Text(biography.name ?? "Unknown")
                                         .bold()
                                 }
-                                Text(biography.summary)
+                                Text(biography.summary ?? "No biography")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                             }

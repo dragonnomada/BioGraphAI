@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct Biography {
+extension BiographyModel {
     
-    var name: String
-    var picture: Data
-    var content: String
-    
-    var summary: String {
-        content.components(separatedBy: "\n").first ?? content
+    var summary: String? {
+        content?.components(separatedBy: "\n").first
     }
     
 }

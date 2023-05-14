@@ -28,6 +28,7 @@
 		EBEA73222A10749B009037F7 /* Biography.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73212A10749B009037F7 /* Biography.swift */; };
 		EBEA73252A107D30009037F7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73242A107D30009037F7 /* Image.swift */; };
 		EBEA73272A10807D009037F7 /* BiographyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73262A10807D009037F7 /* BiographyDetails.swift */; };
+		EBEA732A2A108665009037F7 /* BiographyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73282A108665009037F7 /* BiographyModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		EBEA73212A10749B009037F7 /* Biography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biography.swift; sourceTree = "<group>"; };
 		EBEA73242A107D30009037F7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		EBEA73262A10807D009037F7 /* BiographyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyDetails.swift; sourceTree = "<group>"; };
+		EBEA73292A108665009037F7 /* BiographyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BiographyModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				EBEA730D2A102762009037F7 /* Photo.swift */,
 				EBEA731F2A1073FB009037F7 /* Store.swift */,
 				EBEA73212A10749B009037F7 /* Biography.swift */,
+				EBEA73282A108665009037F7 /* BiographyModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				EBEA72DD2A10147A009037F7 /* BioGraphAIApp.swift in Sources */,
 				EBEA73252A107D30009037F7 /* Image.swift in Sources */,
 				EBEA730A2A102735009037F7 /* OpenAIService.swift in Sources */,
+				EBEA732A2A108665009037F7 /* BiographyModel.xcdatamodeld in Sources */,
 				EBEA73222A10749B009037F7 /* Biography.swift in Sources */,
 				EBEA73272A10807D009037F7 /* BiographyDetails.swift in Sources */,
 				EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */,
@@ -657,6 +661,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBEA73282A108665009037F7 /* BiographyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBEA73292A108665009037F7 /* BiographyModel.xcdatamodel */,
+			);
+			currentVersion = EBEA73292A108665009037F7 /* BiographyModel.xcdatamodel */;
+			path = BiographyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EBEA72D12A10147A009037F7 /* Project object */;
 }

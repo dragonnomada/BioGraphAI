@@ -172,24 +172,12 @@ struct BiographyAdd: View {
                             guard let selectedPhoto = selectedPhoto
                             else { return }
                             
-                            guard let url = URL(string: selectedPhoto.url)
-                            else { return }
-                            
                             guard let biography = biography
                             else { return }
                             
-                            Task {
-                                do {
-                                    let data = try Data(contentsOf: url)
-                                    
-                                    store.biographies.append(Biography(name: name, picture: data, content: biography))
-                                } catch(let error) {
-                                    errorGeneral = "\(error)"
-                                    showErrorGeneral = true
-                                }
-                                
-                                presentationMode.wrappedValue.dismiss()
-                            }
+                            store.addBiography(name: name, content: biography, pictureURL: selectedPhoto.url, save: true)
+                            
+                            presentationMode.wrappedValue.dismiss()
                         }
                         .disabled(errorPhotos != nil || errorChat != nil || selectedPhoto == nil || biography == nil || loadingPhothos || loadingChat)
                         Spacer()
