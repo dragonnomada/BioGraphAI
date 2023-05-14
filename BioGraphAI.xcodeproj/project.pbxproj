@@ -20,7 +20,6 @@
 		EBEA730E2A102762009037F7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730D2A102762009037F7 /* Photo.swift */; };
 		EBEA73102A1027CB009037F7 /* DALLEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA730F2A1027CB009037F7 /* DALLEView.swift */; };
 		EBEA73132A102EB0009037F7 /* DALLEResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */; };
-		EBEA73162A1033E9009037F7 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBEA73152A1033E9009037F7 /* keys.plist */; };
 		EBEA73182A104836009037F7 /* BiographyAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73172A104836009037F7 /* BiographyAdd.swift */; };
 		EBEA731A2A105351009037F7 /* ChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA73192A105351009037F7 /* ChatResponse.swift */; };
 		EBEA731E2A1055A9009037F7 /* ChatResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEA731D2A1055A9009037F7 /* ChatResponseError.swift */; };
@@ -65,7 +64,6 @@
 		EBEA730D2A102762009037F7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		EBEA730F2A1027CB009037F7 /* DALLEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEView.swift; sourceTree = "<group>"; };
 		EBEA73122A102EB0009037F7 /* DALLEResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEResponseError.swift; sourceTree = "<group>"; };
-		EBEA73152A1033E9009037F7 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		EBEA73172A104836009037F7 /* BiographyAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyAdd.swift; sourceTree = "<group>"; };
 		EBEA73192A105351009037F7 /* ChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponse.swift; sourceTree = "<group>"; };
 		EBEA731D2A1055A9009037F7 /* ChatResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponseError.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				EBEA72DC2A10147A009037F7 /* BioGraphAIApp.swift */,
 				EBEA72E02A10147B009037F7 /* Assets.xcassets */,
 				EBEA72E22A10147B009037F7 /* Preview Content */,
-				EBEA73152A1033E9009037F7 /* keys.plist */,
 				EBEA732B2A1093D6009037F7 /* .gitignore.md */,
 			);
 			path = BioGraphAI;
@@ -304,7 +301,6 @@
 			files = (
 				EBEA72E42A10147B009037F7 /* Preview Assets.xcassets in Resources */,
 				EBEA72E12A10147B009037F7 /* Assets.xcassets in Resources */,
-				EBEA73162A1033E9009037F7 /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
