@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB8C7DB52ABCE01100ABFE30 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBEA72D92A10147A009037F7 /* BioGraphAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioGraphAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEA72DC2A10147A009037F7 /* BioGraphAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioGraphAIApp.swift; sourceTree = "<group>"; };
 		EBEA72DE2A10147A009037F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 				EBEA72E02A10147B009037F7 /* Assets.xcassets */,
 				EBEA72E22A10147B009037F7 /* Preview Content */,
 				EBEA732B2A1093D6009037F7 /* .gitignore.md */,
+				EB8C7DB52ABCE01100ABFE30 /* README.md */,
 				EBEA732C2A109495009037F7 /* keys.plist */,
 			);
 			path = BioGraphAI;
